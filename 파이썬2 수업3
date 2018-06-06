@@ -1,0 +1,3515 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(3, 3)"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#복합자료형 57p 부터 하고있음. \n",
+    "set1={'a','b','c'} #항목은 ,로 구분 dict, list, set은 담을수 없다\n",
+    "set2={'a','b',3,'a',3}\n",
+    "len(set1),len(set2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'b', 'c'}"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 3, 'b'}"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set2 #중복이 허용되지 않는다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#셋 연산자\n",
+    "s={1,2,3,4,5}\n",
+    "t={3,4,5,6,7}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5, 6, 7}"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s|t # 합집합"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{3, 4, 5}"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s&t #교집합"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2}"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s-t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{6, 7}"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t-s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 6, 7}"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s^t # 대칭 차집합"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 6, 7}"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t^s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#셋 메소드\n",
+    "s={1,2,3,4}\n",
+    "len(s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "s.add(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "s.add(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s.pop() #무작위로 하나 뽑아서 추출"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s #{2, 3, 4, 5} pop 메소드로 1이 빠져버림"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "s.discard(1) # 1 제거"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "KeyError",
+     "evalue": "1",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-25-47aee57f52ad>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0ms\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m: 1"
+     ]
+    }
+   ],
+   "source": [
+    "s.remove(1) #제거하고싶은게 s 안에 없으므로 키에러발생. discard는 따로 에러는 발생 안시킴."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "s={1,2,3}\n",
+    "t={2,3,4,5}\n",
+    "s &=t #셋 s에 자신과 셋t에 공통으로 존재하는 항목들로만 담는다. #s.intersection_update(t)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 3}"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1}"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s={1,2,3}\n",
+    "t={2,3,4,5}\n",
+    "s -=t #셋 s의 항목중 셋 t에 있는 모든 항목을 제거 #s.difference_update(t)\n",
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 4, 5}"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s={1,2,3}\n",
+    "t={2,3,4,5}\n",
+    "s^=t #셋 s를 자신과 셋t의 항목중 두 셋에 모두 속한 항목을 제외한 모든 항목을 담음. #s.symmetric_difference(t)\n",
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5}"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s={1,2,3}\n",
+    "t={2,3,4,5}\n",
+    "s|=t#셋 t에 있는 모든 항목 중 셋 s에 없는 항목들을 셋 s에 추가 #s.update(t)\n",
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "s.discard(7)#7없는 항목인데도 오류 안내는 메소드임."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "KeyError",
+     "evalue": "7",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-38-ddb2923ada10>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0ms\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m7\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m: 7"
+     ]
+    }
+   ],
+   "source": [
+    "s.remove(7) #7없으니까 오류내죠"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "({1, 2, 4, 5, 7, 9}, {2, 7})"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Lab: 셋 생성 및 연산\n",
+    "\n",
+    "set1={2,4,5,7}\n",
+    "set2={1,2,7,9}\n",
+    "set1|set2, set1&set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#리스트/셋/딕셔너리 축약\n",
+    "#[표현식 for 항목 in 순회형 [if 불린- 표현식]]\n",
+    "#일반형식 \n",
+    "int_str1=[]\n",
+    "for i in range(1, 10):\n",
+    "    int_str1.append(str(i))\n",
+    "#리스트 축약\n",
+    "int_str2=[str(i) for i in range(1,10)] "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['1', '2', '3', '4', '5', '6', '7', '8', '9']"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int_str1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['1', '2', '3', '4', '5', '6', '7', '8', '9']"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int_str2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#조건문이 있는 일반형식과 리스트 축약 비교\n",
+    "#조건문 일반형식\n",
+    "int_str_odd1=[]\n",
+    "for i in range(1,10):\n",
+    "    if i%2 ==1:\n",
+    "        int_str_odd1.append(str(i))\n",
+    "#조건문 리스트축약\n",
+    "int_str_odd2=[str(i) for i in range(1,10) if i%2==1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(['1', '3', '5', '7', '9'], ['1', '3', '5', '7', '9'])"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int_str_odd1,int_str_odd2 # 똑같당! "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([1, 3, 5, 7, 9], [1, 9, 25, 49, 81])"
+      ]
+     },
+     "execution_count": 52,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#리스트 축약\n",
+    "odd_integers = [ i for i in range(10) if i%2==1] # 1~9중에 홀수만 뽑아내기 2로나눠서 나머지가 1인거\n",
+    "squares= [pow(i,2) for i in odd_integers] # i의 제곱 i는 odd_integers에 있는걸로\n",
+    "\n",
+    "odd_integers, squares"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#----모든 값이 0인 벡터 생성--- 0인거 10개 가지고 있는 벡터 생성함. 다똑같은 말이당\n",
+    "import numpy\n",
+    "zeroes1=list(numpy.zeros(10,dtype=numpy.int))\n",
+    "zeroes2=[0]*10\n",
+    "zeroes3=[0 for _ in range(10)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n",
+       " [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n",
+       " [0, 0, 0, 0, 0, 0, 0, 0, 0, 0])"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "zeroes1, zeroes2, zeroes3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#윤년 계산 revisited\n",
+    "#윤년 계산 규칙은 그해의 숫자가 4로 나누어 떨어지는 해는 윤년으로 한다.\n",
+    "#그 해의 숫자가 4로 나누어지지만 100으로도 나누어지면 평년으로 한다.\n",
+    "#그해의 숫자가 100으로 나누어지지만 400으로도 나누어지면 윤년으로 한다.\n",
+    "#2000년에서 3000년 사이에서 뽑아봅시다\n",
+    "leaps=[]\n",
+    "for year in range(2000,3001):\n",
+    "    if year%4==0 and year % 100!=0 or year%400 ==0:\n",
+    "        leaps.append(year)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#리스트 축약 스텝바이스텝\n",
+    "leaps=[year for year in range(2000,3001)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "leaps=[year for year in range(2000,3001) if year %4==0]\n",
+    "leaps=[year for year in range(2000,3001) if year %4==0 and year % 100 !=0]\n",
+    "leaps=[year for year in range(2000,3001) if year %4==0 and year % 100 !=0 or year % 400==0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#Lab 단어 길이로 정렬하는 함수\n",
+    "#한개 이상의 단어를 입력받아서 단어의 길이가 긴 순서부터 정렬해서 리스트로 반환하는 함수 sort_by_word_length_lc() 구현\n",
+    "#길이가 같다면 단어를 알파벳 내림차순으로 정렬\n",
+    "\n",
+    "\n",
+    "\n",
+    "def sort_by_word_length_lc(list(s)):\n",
+    "    lengthby=[lengthby for i in range() ]\n",
+    "    \n",
+    "    \n",
+    "\n",
+    "\n",
+    "#실행결과 예시\n",
+    "#colors= 'red','blue','green','brown','gray'\n",
+    "#sort_by_word_length_lc(colors)\n",
+    "#['green','brown','gray','blue','red']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "fruits=['사과','딸기','바나나','배','블루베리']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "int"
+      ]
+     },
+     "execution_count": 103,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(len(fruits[0]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0.,  2.],\n",
+       "       [ 1.,  2.],\n",
+       "       [ 2.,  3.],\n",
+       "       [ 3.,  1.],\n",
+       "       [ 4.,  4.]])"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "fruits=['사과','딸기','바나나','배','블루베리']\n",
+    "temp=[]\n",
+    "a=[]\n",
+    "c = np.empty( (len(fruits),2) )\n",
+    "for i,number in enumerate (fruits):\n",
+    "    #ith=len(fruits[i]) \n",
+    "    #print(type(i),type(number))\n",
+    "    c[i,0],c[i,1]=i,len(number)\n",
+    "\n",
+    "# 일단 여기까지만.. 실패 ㅠ 리스트를 솔티드 먼저하면 되겠다! 그다음에 순서 바꿔주면 되는거지! 개이득!! "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(2, 1),\n",
+       " (2, 2),\n",
+       " (2, 3),\n",
+       " (2, 4),\n",
+       " (2, 5),\n",
+       " (2, 6),\n",
+       " (2, 7),\n",
+       " (2, 8),\n",
+       " (2, 9),\n",
+       " (3, 1),\n",
+       " (3, 2),\n",
+       " (3, 3),\n",
+       " (3, 4),\n",
+       " (3, 5),\n",
+       " (3, 6),\n",
+       " (3, 7),\n",
+       " (3, 8),\n",
+       " (3, 9),\n",
+       " (4, 1),\n",
+       " (4, 2),\n",
+       " (4, 3),\n",
+       " (4, 4),\n",
+       " (4, 5),\n",
+       " (4, 6),\n",
+       " (4, 7),\n",
+       " (4, 8),\n",
+       " (4, 9),\n",
+       " (5, 1),\n",
+       " (5, 2),\n",
+       " (5, 3),\n",
+       " (5, 4),\n",
+       " (5, 5),\n",
+       " (5, 6),\n",
+       " (5, 7),\n",
+       " (5, 8),\n",
+       " (5, 9),\n",
+       " (6, 1),\n",
+       " (6, 2),\n",
+       " (6, 3),\n",
+       " (6, 4),\n",
+       " (6, 5),\n",
+       " (6, 6),\n",
+       " (6, 7),\n",
+       " (6, 8),\n",
+       " (6, 9),\n",
+       " (7, 1),\n",
+       " (7, 2),\n",
+       " (7, 3),\n",
+       " (7, 4),\n",
+       " (7, 5),\n",
+       " (7, 6),\n",
+       " (7, 7),\n",
+       " (7, 8),\n",
+       " (7, 9),\n",
+       " (8, 1),\n",
+       " (8, 2),\n",
+       " (8, 3),\n",
+       " (8, 4),\n",
+       " (8, 5),\n",
+       " (8, 6),\n",
+       " (8, 7),\n",
+       " (8, 8),\n",
+       " (8, 9),\n",
+       " (9, 1),\n",
+       " (9, 2),\n",
+       " (9, 3),\n",
+       " (9, 4),\n",
+       " (9, 5),\n",
+       " (9, 6),\n",
+       " (9, 7),\n",
+       " (9, 8),\n",
+       " (9, 9)]"
+      ]
+     },
+     "execution_count": 126,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#중첩리스트 축약\n",
+    "pairs= [(x,y) for x in range(2,10) for y in range(1,10)]\n",
+    "pairs"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(2, 1, 2),\n",
+       " (2, 2, 4),\n",
+       " (2, 3, 6),\n",
+       " (2, 4, 8),\n",
+       " (2, 5, 10),\n",
+       " (2, 6, 12),\n",
+       " (2, 7, 14),\n",
+       " (2, 8, 16),\n",
+       " (2, 9, 18),\n",
+       " (3, 1, 3),\n",
+       " (3, 2, 6),\n",
+       " (3, 3, 9),\n",
+       " (3, 4, 12),\n",
+       " (3, 5, 15),\n",
+       " (3, 6, 18),\n",
+       " (3, 7, 21),\n",
+       " (3, 8, 24),\n",
+       " (3, 9, 27),\n",
+       " (4, 1, 4),\n",
+       " (4, 2, 8),\n",
+       " (4, 3, 12),\n",
+       " (4, 4, 16),\n",
+       " (4, 5, 20),\n",
+       " (4, 6, 24),\n",
+       " (4, 7, 28),\n",
+       " (4, 8, 32),\n",
+       " (4, 9, 36),\n",
+       " (5, 1, 5),\n",
+       " (5, 2, 10),\n",
+       " (5, 3, 15),\n",
+       " (5, 4, 20),\n",
+       " (5, 5, 25),\n",
+       " (5, 6, 30),\n",
+       " (5, 7, 35),\n",
+       " (5, 8, 40),\n",
+       " (5, 9, 45),\n",
+       " (6, 1, 6),\n",
+       " (6, 2, 12),\n",
+       " (6, 3, 18),\n",
+       " (6, 4, 24),\n",
+       " (6, 5, 30),\n",
+       " (6, 6, 36),\n",
+       " (6, 7, 42),\n",
+       " (6, 8, 48),\n",
+       " (6, 9, 54),\n",
+       " (7, 1, 7),\n",
+       " (7, 2, 14),\n",
+       " (7, 3, 21),\n",
+       " (7, 4, 28),\n",
+       " (7, 5, 35),\n",
+       " (7, 6, 42),\n",
+       " (7, 7, 49),\n",
+       " (7, 8, 56),\n",
+       " (7, 9, 63),\n",
+       " (8, 1, 8),\n",
+       " (8, 2, 16),\n",
+       " (8, 3, 24),\n",
+       " (8, 4, 32),\n",
+       " (8, 5, 40),\n",
+       " (8, 6, 48),\n",
+       " (8, 7, 56),\n",
+       " (8, 8, 64),\n",
+       " (8, 9, 72),\n",
+       " (9, 1, 9),\n",
+       " (9, 2, 18),\n",
+       " (9, 3, 27),\n",
+       " (9, 4, 36),\n",
+       " (9, 5, 45),\n",
+       " (9, 6, 54),\n",
+       " (9, 7, 63),\n",
+       " (9, 8, 72),\n",
+       " (9, 9, 81)]"
+      ]
+     },
+     "execution_count": 127,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "multiplication_tuple= [(x,y,x*y) for x in range(2,10) for y in range(1,10)]\n",
+    "multiplication_tuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(1, 2, 3),\n",
+       " (1, 2, 5),\n",
+       " (1, 2, 7),\n",
+       " (1, 2, 9),\n",
+       " (1, 3, 4),\n",
+       " (1, 3, 6),\n",
+       " (1, 3, 8),\n",
+       " (1, 4, 5),\n",
+       " (1, 4, 7),\n",
+       " (1, 4, 9),\n",
+       " (1, 5, 6),\n",
+       " (1, 5, 8),\n",
+       " (1, 6, 7),\n",
+       " (1, 6, 9),\n",
+       " (1, 7, 8),\n",
+       " (1, 8, 9),\n",
+       " (2, 3, 4),\n",
+       " (2, 3, 7),\n",
+       " (2, 4, 5),\n",
+       " (2, 4, 8),\n",
+       " (2, 5, 6),\n",
+       " (2, 5, 9),\n",
+       " (2, 6, 7),\n",
+       " (2, 7, 8),\n",
+       " (2, 8, 9),\n",
+       " (3, 4, 5),\n",
+       " (3, 4, 9),\n",
+       " (3, 5, 6),\n",
+       " (3, 6, 7),\n",
+       " (3, 7, 8),\n",
+       " (3, 8, 9),\n",
+       " (4, 5, 6),\n",
+       " (4, 6, 7),\n",
+       " (4, 7, 8),\n",
+       " (4, 8, 9),\n",
+       " (5, 6, 7),\n",
+       " (5, 7, 8),\n",
+       " (5, 8, 9),\n",
+       " (6, 7, 8),\n",
+       " (6, 8, 9),\n",
+       " (7, 8, 9)]"
+      ]
+     },
+     "execution_count": 129,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#나중에 나온 for문은 앞의 for문의 결과를 사용할 수 있음 \n",
+    "triples= [(x,y,z) for x in range(1,10)\n",
+    "         for y in range(x +1,10)\n",
+    "          for z in range(y+1, 10, x+1)]\n",
+    "triples"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['A+', 'A0', 'A-', 'B+', 'B0', 'B-', 'C+', 'C0', 'C-', 'D+', 'D0', 'D-']"
+      ]
+     },
+     "execution_count": 130,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#문자열 결합에도 사용 가능\n",
+    "pass_grades=[letter + sign for letter in 'ABCD' for sign in '+0-']\n",
+    "pass_grades"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['FSW',\n",
+       " 'FSG',\n",
+       " 'FSR',\n",
+       " 'FSB',\n",
+       " 'FMW',\n",
+       " 'FMG',\n",
+       " 'FMR',\n",
+       " 'FMB',\n",
+       " 'FLW',\n",
+       " 'FLG',\n",
+       " 'FLR',\n",
+       " 'FLB',\n",
+       " 'MSW',\n",
+       " 'MSG',\n",
+       " 'MSR',\n",
+       " 'MSB',\n",
+       " 'MMW',\n",
+       " 'MMG',\n",
+       " 'MMR',\n",
+       " 'MMB',\n",
+       " 'MLW',\n",
+       " 'MLG',\n",
+       " 'MLR',\n",
+       " 'MLB',\n",
+       " 'MXW',\n",
+       " 'MXG',\n",
+       " 'MXR',\n",
+       " 'MXB']"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Lab:중첩리스트 축약 형식으로 변환\n",
+    "sku=[]\n",
+    "for gender in 'FM': # female, male\n",
+    "    for size in 'SMLX': # small, medium, large, extra large\n",
+    "        if gender =='F' and size =='X':\n",
+    "            continue\n",
+    "        for color in 'WGRB': # wgutem green, red, black\n",
+    "            sku.append(gender + size + color)\n",
+    "sku"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([9, 4, 1, 0, 1, 4, 9], {0, 1, 4, 9})"
+      ]
+     },
+     "execution_count": 134,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\n",
+    "x= [i*i for i in (-3,-2,-1,0,1,2,3)]#리스트축약\n",
+    "y= {i*i for i in (-3,-2,-1,0,1,2,3)}#셋축약\n",
+    "\n",
+    "x, y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],\n",
+       " {0, 1, 2, 3, 4, 5, 6, 7, 8, 9})"
+      ]
+     },
+     "execution_count": 135,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x=[abs(i) for i in range(-9,10)]#리스트 축약\n",
+    "y={abs(i) for i in range(-9,10)}#셋 축약\n",
+    "x, y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['.adobe',\n",
+       " '.anaconda',\n",
+       " '.bash_history',\n",
+       " '.bash_profile',\n",
+       " '.bash_profile-anaconda3.bak',\n",
+       " '.bash_profile.pysave',\n",
+       " '.bash_sessions',\n",
+       " '.CFUserTextEncoding',\n",
+       " '.conda',\n",
+       " '.condarc',\n",
+       " '.continuum',\n",
+       " '.docker',\n",
+       " '.DS_Store',\n",
+       " '.gitconfig',\n",
+       " '.idlerc',\n",
+       " '.ipynb_checkpoints',\n",
+       " '.ipython',\n",
+       " '.jupyter',\n",
+       " '.keras',\n",
+       " '.local',\n",
+       " '.matplotlib',\n",
+       " '.node-gyp',\n",
+       " '.npm',\n",
+       " '.oracle_jre_usage',\n",
+       " '.pyenv',\n",
+       " '.python_history',\n",
+       " '.python_history-02857.tmp',\n",
+       " '.python_history-05656.tmp',\n",
+       " '.spyder-py3',\n",
+       " '.subversion',\n",
+       " '.Trash',\n",
+       " '.wapi',\n",
+       " 'anaconda3',\n",
+       " 'Applications',\n",
+       " 'BasicPython1.ipynb',\n",
+       " 'board',\n",
+       " 'Creative Cloud Files',\n",
+       " 'Desktop',\n",
+       " 'Documents',\n",
+       " 'Downloads',\n",
+       " 'ghostdriver.log',\n",
+       " 'iCloud Drive(아카이브)',\n",
+       " 'Library',\n",
+       " 'logs',\n",
+       " 'MNIST_data',\n",
+       " 'Movies',\n",
+       " 'Music',\n",
+       " 'Pictures',\n",
+       " 'Public',\n",
+       " 'TestAR',\n",
+       " 'testtest.py',\n",
+       " 'UnityStudy',\n",
+       " 'Untitled.ipynb',\n",
+       " 'Untitled1.ipynb',\n",
+       " 'Untitled10.ipynb',\n",
+       " 'Untitled11.ipynb',\n",
+       " 'Untitled12.ipynb',\n",
+       " 'Untitled13.ipynb',\n",
+       " 'Untitled14.ipynb',\n",
+       " 'Untitled15.ipynb',\n",
+       " 'Untitled16.ipynb',\n",
+       " 'Untitled17.ipynb',\n",
+       " 'Untitled18.ipynb',\n",
+       " 'Untitled19.ipynb',\n",
+       " 'Untitled2.ipynb',\n",
+       " 'Untitled3.ipynb',\n",
+       " 'Untitled4.ipynb',\n",
+       " 'Untitled5.ipynb',\n",
+       " 'Untitled6.ipynb',\n",
+       " 'Untitled7.ipynb',\n",
+       " 'Untitled8.ipynb',\n",
+       " 'Untitled9.ipynb',\n",
+       " '스냅스 _ 포토북, 사진인화, 액자, 카드, 캘린더, 포토상품.htm',\n",
+       " '스냅스 _ 포토북, 사진인화, 액자, 카드, 캘린더, 포토상품_files',\n",
+       " '파이썬2 1수업.ipynb',\n",
+       " '파이썬2 수업 2.ipynb',\n",
+       " '파이썬2 수업3.ipynb']"
+      ]
+     },
+     "execution_count": 136,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import os # path 디렉토리에 있는 항목들의 이름을 담은 리스트를 반환\n",
+    "file_list= os.listdir() #os.listdir(path='.')와 같음\n",
+    "file_list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "py_files={file for file in file_list if file.lower().endswith(('.py','.pyw'))} # py 혹은 pyw 확장자로 끝나는 애들 가져오장! "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'testtest.py'}"
+      ]
+     },
+     "execution_count": 138,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "py_files"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{-9: 81,\n",
+       " -8: 64,\n",
+       " -7: 49,\n",
+       " -6: 36,\n",
+       " -5: 25,\n",
+       " -4: 16,\n",
+       " -3: 9,\n",
+       " -2: 4,\n",
+       " -1: 1,\n",
+       " 0: 0,\n",
+       " 1: 1,\n",
+       " 2: 4,\n",
+       " 3: 9,\n",
+       " 4: 16,\n",
+       " 5: 25,\n",
+       " 6: 36,\n",
+       " 7: 49,\n",
+       " 8: 64,\n",
+       " 9: 81}"
+      ]
+     },
+     "execution_count": 139,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#딕셔너리 축약\n",
+    "x= {i: pow(i,2) for i in range(-9,10)}\n",
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 140,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'딸기': 'strawberry',\n",
+       " '바나나': 'banana',\n",
+       " '블루베리': 'blueberry',\n",
+       " '사과': 'apple',\n",
+       " '자두': 'plum',\n",
+       " '키위': 'kiwi',\n",
+       " '포도': 'grape'}"
+      ]
+     },
+     "execution_count": 140,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "koreng = dict(사과='apple', 블루베리= 'blueberry', 딸기='strawberry',\n",
+    "             키위='kiwi',바나나='banana',포도='grape',자두='plum')\n",
+    "koreng"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('apple', '사과'),\n",
+       " ('banana', '바나나'),\n",
+       " ('blueberry', '블루베리'),\n",
+       " ('grape', '포도'),\n",
+       " ('kiwi', '키위'),\n",
+       " ('plum', '자두'),\n",
+       " ('strawberry', '딸기')]"
+      ]
+     },
+     "execution_count": 141,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "engkor={v:k for k,v in koreng.items()}\n",
+    "sorted(engkor.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 143,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#튜플 생성\n",
+    "empty1=()\n",
+    "empty1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "()"
+      ]
+     },
+     "execution_count": 145,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "empty2= tuple()\n",
+    "empty2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('파이썬',)"
+      ]
+     },
+     "execution_count": 148,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "T=('파이썬',) #, 빼버리면 그냥 문자열로 바뀌어버리므로, 튜플로 만들고 싶으면 , 찍어줘야한다.\n",
+    "T"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 149,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('엄마', '아빠', '나', '동생')"
+      ]
+     },
+     "execution_count": 149,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "family= ('엄마','아빠','나','동생',)\n",
+    "family"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 154,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('피', '아', '노')"
+      ]
+     },
+     "execution_count": 154,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#tuple 생성\n",
+    "tuple1= tuple('피아노')\n",
+    "tuple1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 153,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('피', '아', '노')"
+      ]
+     },
+     "execution_count": 153,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple2=tuple('피아노',) #위에거랑 차이가 1도 없는데 무슨일이지?\n",
+    "tuple2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 155,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2, 3, 4, 5)"
+      ]
+     },
+     "execution_count": 155,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple3= tuple([1,2,3,4,5])\n",
+    "tuple3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 156,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 0 1 4 3 3 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(len(empty1),len(empty2),len(T),len(family),len(tuple1),len(tuple2),len(tuple3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 163,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "드럼 기타 피아노\n",
+      "엄마 아빠 ('나', '동생')\n",
+      "abc xyz.kr\n"
+     ]
+    }
+   ],
+   "source": [
+    "#튜플 대입\n",
+    "i,j,k= '드럼','기타','피아노'\n",
+    "print(i,j,k)\n",
+    "\n",
+    "a,b,c=['엄마','아빠',('나','동생')]\n",
+    "print(a,b,c)\n",
+    "\n",
+    "email='abc@xyz.kr'\n",
+    "user_name, domain= email.split('@')\n",
+    "print(user_name,domain)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 158,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "기타 드럼 피아노\n"
+     ]
+    }
+   ],
+   "source": [
+    "#스왑\n",
+    "i,j=j,i\n",
+    "print(i,j,k)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "too many values to unpack (expected 2)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-166-199a7a437a54>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mx\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0my\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m3\u001b[0m \u001b[0;31m# 당연히 오류난당\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mx\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0my\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mValueError\u001b[0m: too many values to unpack (expected 2)"
+     ]
+    }
+   ],
+   "source": [
+    "#더미변수와 튜플 대입\n",
+    "x,y=1,2,3 # 당연히 오류난당\n",
+    "print(x,y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 169,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "x, _, y, _=1,2,3,4\n",
+    "print(x,y,_)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 171,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#튜플 패킹과 언패킹 \n",
+    "#패킹은 하나의 변수에 여러개의 값을 넣는것\n",
+    "#언패킹은 패킹된 변수에서 여러개의 값을 꺼내오는 것\n",
+    "t=3.14,[5,-3],'green',('드럼','기타') #packing\n",
+    "a,b,c,d= t #unpacking"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.14"
+      ]
+     },
+     "execution_count": 172,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 173,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, -3]"
+      ]
+     },
+     "execution_count": 173,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 174,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'green'"
+      ]
+     },
+     "execution_count": 174,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 175,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('드럼', '기타')"
+      ]
+     },
+     "execution_count": 175,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 176,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#모든 배열형(리스트,튜플 등)은 패킹/ 언패킹 연산자 *를 사용해서 객체의 패킹 또는 언패킹이 가능하다\n",
+    "x,y,*z= 3.14,[5,-3],'green',('드럼','기타')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 177,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.14"
+      ]
+     },
+     "execution_count": 177,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 178,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, -3]"
+      ]
+     },
+     "execution_count": 178,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 179,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['green', ('드럼', '기타')]"
+      ]
+     },
+     "execution_count": 179,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 180,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "*x,y,z= 3.14,[5,-3],'green',('드럼','기타')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 181,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[3.14, [5, -3]]"
+      ]
+     },
+     "execution_count": 181,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 182,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'green'"
+      ]
+     },
+     "execution_count": 182,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 183,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('드럼', '기타')"
+      ]
+     },
+     "execution_count": 183,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 184,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "x,*y,z= 3.14,[5,-3],'green',('드럼','기타')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 185,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.14"
+      ]
+     },
+     "execution_count": 185,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 186,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[5, -3], 'green']"
+      ]
+     },
+     "execution_count": 186,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 187,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('드럼', '기타')"
+      ]
+     },
+     "execution_count": 187,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 188,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#배열형 패킹/언패킹 연산자\n",
+    "def multiply(x,y,z):\n",
+    "    return x*y*z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 189,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 189,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "multiply(2,3,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 190,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "numbers=2,3,5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 192,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 192,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "multiply(*numbers) #multiply(numbers) 하면 오류난다 당연히"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 193,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "45"
+      ]
+     },
+     "execution_count": 193,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "multiply(3,*numbers[1:]) # 3* 3*5가 되어 45가 된다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 195,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "__main__.RGB"
+      ]
+     },
+     "execution_count": 195,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#네임드 튜플 77페이지 \n",
+    "from collections import namedtuple\n",
+    "RGBtuple= namedtuple('RGB',['red','green','blue'])\n",
+    "RGBtuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 202,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "RGB(red=0, green=51, blue=204)"
+      ]
+     },
+     "execution_count": 202,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x1=RGBtuple(255,51,102) #인덱스값으로 생성\n",
+    "x2=RGBtuple(blue=51,red=102,green=153)# 필드(속성) 이름으로 생성\n",
+    "x3=RGBtuple(0,blue=204,green=51)# 인덱스값과 필드(속성) 이름으로 생성\n",
+    "x3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 203,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(102, 153, 51)"
+      ]
+     },
+     "execution_count": 203,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "r,g,b=x2 #일반 튜플처럼 언패킹 가능\n",
+    "r,g,b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 204,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "255"
+      ]
+     },
+     "execution_count": 204,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x1[0]# 인덱스위치로 접근"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 205,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 205,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x3.red #필드(속성)으로 접근"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "examples.Student"
+      ]
+     },
+     "execution_count": 206,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#네임드 튜플의 선택 전달인자 활용\n",
+    "from collections import namedtuple\n",
+    "PythonCourse = namedtuple('Student',\n",
+    "                         'id,name,name,exam,exam,grade',\n",
+    "                         rename=True, #만약 rename이 참이면\n",
+    "                         # 잘못된 필드 이름은 인덱스 값을 지닌 이름으로 자동 대체 됨\n",
+    "                         module='examples')\n",
+    "\n",
+    "PythonCourse #module 전달인자 값으로 대체: __main__.Student (x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 207,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Student(id='12345', name='홍', _2='길동', exam=91, _4=95, grade='A0')"
+      ]
+     },
+     "execution_count": 207,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s=PythonCourse('12345','홍','길동',91,95,'A0')\n",
+    "s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 208,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "__main__.국경일"
+      ]
+     },
+     "execution_count": 208,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\n",
+    "NationalHoliday=namedtuple('국경일','name month day')\n",
+    "NationalHoliday"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "국경일(name='한글날', month='10월', day='9일')"
+      ]
+     },
+     "execution_count": 209,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "hangulday= NationalHoliday('한글날','10월','9일')\n",
+    "hangulday"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 210,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'한글날'"
+      ]
+     },
+     "execution_count": 210,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "getattr(hangulday,'name') #필드(속성)이름으로 필드의 값을 반환"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 211,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('name', 'month', 'day')"
+      ]
+     },
+     "execution_count": 211,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#_fileds 속성은 필드(속성) 이름들을 튜플 형식의 문자열로 가지고 있음\n",
+    "hangulday._fields"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 212,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "국경일(name='한글날', month='October', day='9th')"
+      ]
+     },
+     "execution_count": 212,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#_replace(**kwargs) 메소드는 특정한 속성을 새로운 값으로 대체한 후 새로운 객체를 생성해서 반환\n",
+    "hangulday._replace(month='October',day='9th')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 213,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "국경일(name='한글날', month='10월', day='9일')"
+      ]
+     },
+     "execution_count": 213,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "hangulday"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 214,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "국경일(name='한글날', month='October', day='9th')"
+      ]
+     },
+     "execution_count": 214,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "hanguleng=hangulday._replace(month='October',day='9th')\n",
+    "hanguleng"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('name', '한글날'), ('month', '10월'), ('day', '9일')])"
+      ]
+     },
+     "execution_count": 215,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#_asdict()메소드는 필드(속성) 이름과 값을 맵핑하는 새로운 orderd dict의 인스턴스를 반환\n",
+    "hangulday._asdict() # orderdDict 항목을 담을 때 추가된 순서대로 항목을 저장"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 216,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "국경일(name='제헌절', month='7월', day='17일')"
+      ]
+     },
+     "execution_count": 216,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#_make(iterable)메소드는 배열형이나 순회형 자료를 전달인자로 받아 새로운 객체를 생성해서 반환\n",
+    "constitutionday=hangulday._make(['제헌절','7월','17일'])\n",
+    "constitutionday"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 217,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "from builtins import property as _property, tuple as _tuple\n",
+      "from operator import itemgetter as _itemgetter\n",
+      "from collections import OrderedDict\n",
+      "\n",
+      "class 국경일(tuple):\n",
+      "    '국경일(name, month, day)'\n",
+      "\n",
+      "    __slots__ = ()\n",
+      "\n",
+      "    _fields = ('name', 'month', 'day')\n",
+      "\n",
+      "    def __new__(_cls, name, month, day):\n",
+      "        'Create new instance of 국경일(name, month, day)'\n",
+      "        return _tuple.__new__(_cls, (name, month, day))\n",
+      "\n",
+      "    @classmethod\n",
+      "    def _make(cls, iterable, new=tuple.__new__, len=len):\n",
+      "        'Make a new 국경일 object from a sequence or iterable'\n",
+      "        result = new(cls, iterable)\n",
+      "        if len(result) != 3:\n",
+      "            raise TypeError('Expected 3 arguments, got %d' % len(result))\n",
+      "        return result\n",
+      "\n",
+      "    def _replace(_self, **kwds):\n",
+      "        'Return a new 국경일 object replacing specified fields with new values'\n",
+      "        result = _self._make(map(kwds.pop, ('name', 'month', 'day'), _self))\n",
+      "        if kwds:\n",
+      "            raise ValueError('Got unexpected field names: %r' % list(kwds))\n",
+      "        return result\n",
+      "\n",
+      "    def __repr__(self):\n",
+      "        'Return a nicely formatted representation string'\n",
+      "        return self.__class__.__name__ + '(name=%r, month=%r, day=%r)' % self\n",
+      "\n",
+      "    def _asdict(self):\n",
+      "        'Return a new OrderedDict which maps field names to their values.'\n",
+      "        return OrderedDict(zip(self._fields, self))\n",
+      "\n",
+      "    def __getnewargs__(self):\n",
+      "        'Return self as a plain tuple.  Used by copy and pickle.'\n",
+      "        return tuple(self)\n",
+      "\n",
+      "    name = _property(_itemgetter(0), doc='Alias for field number 0')\n",
+      "\n",
+      "    month = _property(_itemgetter(1), doc='Alias for field number 1')\n",
+      "\n",
+      "    day = _property(_itemgetter(2), doc='Alias for field number 2')\n",
+      "\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "#_source 속성은 클래스 정의를 출력\n",
+    "print(constitutionday._source) #print(hangulday._sorce)도 동일한 내용이 출력됨"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "stock = dict (키보드=2,드럼=3,기타=11,베이스=5,색소폰=1)\n",
+    "\n",
+    "from collections import OrderedDict\n",
+    "OrderedDict(sorted(stock.items()))\n",
+    "\n",
+    "OrderedDict(sorted(stock.items(fruits,)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "({3, 5}, set)"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#집합형 80페이지부터\n",
+    "#종류에는 셋(가변), 프로즌셋(불변)이 있습니다. \n",
+    "s={1,2,3,4,5} #또는 s=set({1,2,3,4,5})\n",
+    "t=frozenset({3,5,7,8,9})\n",
+    "x=s&t\n",
+    "y=t&s # 셋과 프로즌셋이 함께 이항연산자로 처리될 경우 결과물의 자료형은 왼쪽 피연산자를 따라갑니다.\n",
+    "x,type(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(frozenset({3, 5}), frozenset)"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y,type(y)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#매핑형\n",
+    "#순서없이 0개 이상의 키-값 쌍으로 된 객체를 참조하는 자료형\n",
+    "#순회형\n",
+    "#순서 없는 매핑형 , 순서있는 매핑형이 있습니다.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-5-ce13378d36ed>, line 5)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-5-ce13378d36ed>\"\u001b[0;36m, line \u001b[0;32m5\u001b[0m\n\u001b[0;31m    collections.defaultdict([default_factory[, ...]])\u001b[0m\n\u001b[0m                                             ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#디폴트 딕셔너리\n",
+    "#파이썬 표준 라이브러리인 collections 모듈에서 불러오기를 해야함\n",
+    "#일반 딕셔너리(dict)와 같지만 누락된, 즉 존재하지 않는 키를 처리하는 방법이 다름\n",
+    "from collections import defaultdict\n",
+    "collections.defaultdict([default_factory[, ...]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "KeyError",
+     "evalue": "'name'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-6-70884b493106>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0md\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m{\u001b[0m\u001b[0;34m}\u001b[0m \u001b[0;31m#일반 딕셔너리\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mx\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0md\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'name'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mKeyError\u001b[0m: 'name'"
+     ]
+    }
+   ],
+   "source": [
+    "d={} #일반 딕셔너리\n",
+    "x=d['name']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "from collections import defaultdict #디폴트 딕셔너리\n",
+    "dd1= defaultdict(str)\n",
+    "dd2=defaultdict(int)\n",
+    "x=dd1['name1']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "''"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x #문자열"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "defaultdict(str, {'name1': ''})"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dd1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "y=dd2['name']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y#정수형이 기본이니까"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "defaultdict(int, {'name': 0})"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dd2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "from collections import defaultdict\n",
+    "dd_int=defaultdict(lambda:-1)\n",
+    "dd_point=defaultdict(lambda:(0,0))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "dd_msg=defaultdict(lambda:'남겨진 메시지가 없습니다')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "x=dd_int['잔액']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "-1"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "defaultdict(<function __main__.<lambda>>, {'잔액': -1})"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dd_int"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "y=dd_point['좌표']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(0, 0)"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "defaultdict(<function __main__.<lambda>>, {'좌표': (0, 0)})"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dd_point"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "z=dd_msg['메시지']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'남겨진 메시지가 없습니다'"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "defaultdict(<function __main__.<lambda>>, {'메시지': '남겨진 메시지가 없습니다'})"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dd_msg"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#예시:디폴트 딕셔너리의 응용\n",
+    "\n",
+    "item_list=[('과일','블루베리'),('악기','드럼'),('악기','베이스'),('과일','사과'),('악기','기타')]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "\n",
+    "d={}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for k,v in item_list:\n",
+    "    d.setdefault(k,[]).append(v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('과일', ['블루베리', '사과']), ('악기', ['드럼', '베이스', '기타'])]"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(d.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#디폴트딕셔너리 사용\n",
+    "from collections import defaultdict\n",
+    "item_list=[('과일','블루베리'),('악기','드럼'),('악기','베이스'),('과일','사과'),('악기','기타')]\n",
+    "dd=defaultdict(list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "for k,v in item_list:\n",
+    "    dd[k].append(v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('과일', ['블루베리', '사과']), ('악기', ['드럼', '베이스', '기타'])]"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(dd.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "item_list=[('과일','블루베리'),('악기','드럼'),('악기','베이스'),('과일','사과'),('악기','기타')]\n",
+    "dd=defaultdict(set)\n",
+    "for k,v in item_list:\n",
+    "    dd[k].add(v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('과일', {'블루베리', '사과'}), ('악기', {'기타', '드럼', '베이스'})]"
+      ]
+     },
+     "execution_count": 44,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(dd.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "from collections import defaultdict\n",
+    "item_list=[('과일','블루베리'),('악기','드럼'),('악기','베이스'),('과일','사과'),('악기','기타')]\n",
+    "dd=defaultdict(int)\n",
+    "for e1,e2 in item_list:\n",
+    "    dd[e1] +=1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('과일', 2), ('악기', 3)]"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(dd.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('기타', 11), ('드럼', 3), ('베이스', 5), ('색소폰', 1), ('키보드', 2)])"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#순서가 있는 딕셔너리의 활용\n",
+    "#일반 딕셔너리\n",
+    "stock=dict(키보드=2,드럼=3,기타=11,베이스=5,색소폰=1) \n",
+    "from collections import OrderedDict\n",
+    "OrderedDict(sorted(stock.items()))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('드럼', 3), ('기타', 11), ('키보드', 2), ('베이스', 5), ('색소폰', 1)])"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "OrderedDict(sorted(stock.items(),key=lambda e:len(e[0])))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(2, 2, 3, 3, 3)"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len('드럼'),len('기타'),len('키보드'),len('베이스'),len('색소폰')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('색소폰', 1), ('키보드', 2), ('드럼', 3), ('베이스', 5), ('기타', 11)])"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "OrderedDict(sorted(stock.items(), key=lambda e:e[1])) #두번째 항목인 숫자부터 오름차순임."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#튜플을 항목으로 가지고 있는 리스트\n",
+    "fruits=[('블루베리',51),('사과',19),('바나나',25)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('바나나', 25), ('블루베리', 51), ('사과', 19)])"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "OrderedDict(sorted(fruits)) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('사과', 19), ('바나나', 25), ('블루베리', 51)])"
+      ]
+     },
+     "execution_count": 62,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "OrderedDict(sorted(fruits,key=lambda e: len(e[0])))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "OrderedDict([('블루베리', 51), ('바나나', 25), ('사과', 19)])"
+      ]
+     },
+     "execution_count": 63,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "OrderedDict(sorted(fruits,key=lambda e: e[1],reverse=True))#두번째항목 내림차순"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "\n",
+    "\n",
+    "#디폴트 딕셔너리의 응용\n",
+    "tasks=OrderedDict()\n",
+    "tasks[1]='이메일 확인 및 답변'\n",
+    "tasks[2]='강의 준비'\n",
+    "tasks[3]='강의 자료 올리기'\n",
+    "tasks[4]='백업'\n",
+    "tasks[5]='점심'\n",
+    "tasks[6]='강의'\n",
+    "tasks[7]='면담'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(1, '이메일 확인 및 답변'),\n",
+       " (2, '강의 준비'),\n",
+       " (3, '강의 자료 올리기'),\n",
+       " (4, '백업'),\n",
+       " (5, '점심'),\n",
+       " (6, '강의'),\n",
+       " (7, '면담')]"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.items()) #추가된 순서대로 항목이 저장"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['이메일 확인 및 답변', '강의 준비', '강의 자료 올리기', '백업', '점심', '강의', '면담']"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(7, '면담')"
+      ]
+     },
+     "execution_count": 67,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tasks.popitem() #맨 마지막거 뽑아내기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['이메일 확인 및 답변', '강의 준비', '강의 자료 올리기', '백업', '점심', '강의']"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['이메일 확인 및 답변', '강의 준비', '강의 자료 올리기', '백업', '점심', '강의']"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, '이메일 확인 및 답변')"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tasks.popitem(last=False)#맨 처음거 뽑아내기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['강의 준비', '강의 자료 올리기', '백업', '점심', '강의']"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.values())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(2, '강의 준비'), (3, '강의 자료 올리기'), (4, '백업'), (5, '점심'), (6, '강의')]"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "tasks.move_to_end(4)#4번째항목 맨 마지막으로 빼기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(2, '강의 준비'), (3, '강의 자료 올리기'), (5, '점심'), (6, '강의'), (4, '백업')]"
+      ]
+     },
+     "execution_count": 76,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "tasks.move_to_end(3,last=False)#3번째 항목 맨 앞으로 빼기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(3, '강의 자료 올리기'), (2, '강의 준비'), (5, '점심'), (6, '강의'), (4, '백업')]"
+      ]
+     },
+     "execution_count": 78,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(tasks.items()) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['백업', '강의', '점심', '강의 준비', '강의 자료 올리기']"
+      ]
+     },
+     "execution_count": 79,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(reversed(tasks.values())) #뒤에서부터 순서대로 나열하기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
