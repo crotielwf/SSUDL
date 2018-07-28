@@ -1,8 +1,10 @@
 # DAstudy
 DA / ML / DL
 
-## 인원 구성
-김학인, 안우주, 이희준
+## Members 
+Hakin Kim Soongsil Univ. Mathematics
+WooJu An Soongsil Univ. Statistics
+HeeJun Lee Soongsil Univ. Mathematics
 
 -------------------------------------------------------------------------------
 
