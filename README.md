@@ -1,6 +1,9 @@
 # DAstudy
 DA / ML / DL
 
+## 인원 구성
+김학인, 안우주, 이희준
+
 -------------------------------------------------------------------------------
 
 DeepLearningZeroToAll Lecture (https://github.com/hunkim/DeepLearningZeroToAll)
